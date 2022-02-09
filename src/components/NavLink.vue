@@ -1,5 +1,5 @@
 <template>
-    <router-link :to="to" class="bg-white rounded-lg p-3 text-center uppercase font-bold cursor-pointer">
+    <router-link :to="to" class="p-3 font-bold text-center uppercase bg-white rounded-lg cursor-pointer">
         <slot />
     </router-link>
 </template>

@@ -1,10 +1,8 @@
 <template class="antialiased">
-    <div class="bg-gray-400">
-        <div class="container mx-auto min-h-screen pt-12">
-            <!--        <img alt="Vue logo" src="./assets/logo.png" />-->
-            <!--        <HelloWorld msg="Hello Vue 3 + Vite" />-->
-            <router-view></router-view>
-        </div>
+    <div class="min-h-screen bg-gray-400">
+        <!--        <img alt="Vue logo" src="./assets/logo.png" />-->
+        <!--        <HelloWorld msg="Hello Vue 3 + Vite" />-->
+        <router-view></router-view>
     </div>
 </template>
 
