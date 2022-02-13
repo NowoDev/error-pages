@@ -1,6 +1,6 @@
 # Error Pages
 
-Custom error pages designed from scratch. Inspiration gotten from the internet.
+Custom pages (landing pages, error pages and others) designed from scratch. Inspiration gotten from the internet.
 
 ## Link to Designs
 
