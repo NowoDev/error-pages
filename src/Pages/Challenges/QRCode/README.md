@@ -41,7 +41,6 @@ the [QR code component challenge on Frontend Mentor](https://www.frontendmentor.
 I discovered two methods of centering an element vertically
 
 ```html
-
 <div class="flex w-full h-screen">
   <div class="flex justify-center m-auto">
     <!--  content goes here-->
@@ -50,7 +49,6 @@ I discovered two methods of centering an element vertically
 ```
 
 ```html
-
 <div class="flex w-full h-screen items-center justify-center">
   <!--  content goes here-->
 </div>
