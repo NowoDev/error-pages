@@ -6,10 +6,10 @@
                     <div class="absolute w-full h-full rounded-t-xl opacity-50 bg-stats-soft-violet md:rounded-tl-none md:rounded-r-xl" />
                     <img src="../../../assets/images/image-header-mobile.jpg"
                          class="object-cover rounded-t-xl md:hidden"
-                         alt="qr code">
+                         alt="stats card">
                     <img src="../../../assets/images/image-header-desktop.jpg"
                          class="hidden object-cover h-full rounded-t-xl md:block md:rounded-tl-none md:rounded-r-xl"
-                         alt="qr code">
+                         alt="stats card">
                 </div>
 
                 <div class="py-8 my-auto md:pl-12 md:pr-16">
