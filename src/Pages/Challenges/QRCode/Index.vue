@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col w-full h-screen bg-[#D5E1EF]">
+    <div class="flex flex-col w-full h-screen bg-qr-primary">
         <div class="flex justify-center m-auto">
             <div class="p-4 pb-10 space-y-5 w-72 bg-white rounded-2xl">
                 <img src="../../../assets/images/image-qr-code.png" class="rounded-xl" alt="qr code">
@@ -12,7 +12,7 @@
             </div>
         </div>
 
-        <div class="attribution text-center">
+        <div class="text-center attribution">
             Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
             Coded by <a href="https://github.com/nowodev" target="_blank">Favour Okunowo</a>.
         </div>
