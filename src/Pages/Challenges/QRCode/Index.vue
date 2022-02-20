@@ -2,7 +2,7 @@
     <div class="flex flex-col w-full h-screen bg-[#D5E1EF]">
         <div class="flex justify-center m-auto">
             <div class="p-4 pb-10 space-y-5 w-72 bg-white rounded-2xl">
-                <img src="../../assets/images/image-qr-code.png" class="rounded-xl" alt="qr code">
+                <img src="../../../assets/images/image-qr-code.png" class="rounded-xl" alt="qr code">
                 <h3 class="text-xl font-bold text-center text-gray-700">
                     Improve your front-end <br> skills by building projects
                 </h3>
