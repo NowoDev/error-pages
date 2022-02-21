@@ -6,6 +6,7 @@ import NotFound from "../Pages/NotFound.vue"
 import Index from "../Pages/Challenges/Index.vue";
 import QRCode from "../Pages/Challenges/QRCode/Index.vue";
 import Stats from "../Pages/Challenges/Stats_Preview_Card/Index.vue"
+import Article from "../Pages/Challenges/Article_Preview_Card/Index.vue"
 
 const routes = [
     { path: '/', name: 'Home', component: Home },
@@ -20,6 +21,12 @@ const routes = [
         path: '/challenges/stats', name: 'Stats', component: Stats,
         meta: {
             title: 'Frontend Mentor | Stats preview card component',
+        }
+    },
+    {
+        path: '/challenges/article-preview', name: 'Article', component: Article,
+        meta: {
+            title: 'Frontend Mentor | Article preview component',
         }
     },
     { path: '/404', name: '404', component: Error404 },

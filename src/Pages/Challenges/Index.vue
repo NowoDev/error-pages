@@ -2,6 +2,7 @@
     <div class="grid grid-cols-3 gap-4 items-center">
         <NavLink to="/challenges/qrcode">QRCode</NavLink>
         <NavLink to="/challenges/stats">Stats</NavLink>
+        <NavLink to="/challenges/article-preview">Article</NavLink>
     </div>
 </template>
 
