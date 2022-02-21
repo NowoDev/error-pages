@@ -58,4 +58,4 @@ I discovered two methods of centering an element vertically
 
 - Website - [Favour Okunowo](https://www.nowodev.netlify.app)
 - Frontend Mentor - [@nowodev](https://www.frontendmentor.io/profile/nowodev)
-- Twitter - [@nowodev](https://www.twitter.com/yourusername)
+- Twitter - [@nowodev](https://www.twitter.com/nowodev)

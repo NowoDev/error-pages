@@ -47,7 +47,6 @@ Users should be able to:
 I learned how to apply a color over an image using relative and absolute positioning, and opacity
 
 ```html
-
 <div class="relative">
   <div class="absolute w-full h-full rounded-t-xl opacity-50 bg-stats-soft-violet md:rounded-tl-none md:rounded-r-xl" />
   <img src="../../../assets/images/image-header-mobile.jpg"
