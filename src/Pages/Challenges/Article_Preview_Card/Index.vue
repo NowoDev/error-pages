@@ -1,31 +1,25 @@
 <template>
     <div class="flex flex-col p-4 w-full min-h-screen bg-article-light-grayish-blue">
         <div class="flex justify-center m-auto">
-            <div class="w-full bg-white rounded-xl shadow-2xl md:flex md:flex-row">
+            <div class="w-80 bg-white rounded-xl shadow-2xl sm:w-96 md:w-full md:flex md:flex-row">
                 <div class="md:w-80">
                     <img src="../../../assets/images/article/drawers.jpg"
-                         class="object-cover h-full rounded-t-xl md:rounded-tr-none md:rounded-l-xl"
+                         class="h-full rounded-t-xl md:rounded-tr-none md:rounded-l-xl"
                          alt="article card">
                 </div>
 
-                <div class="p-8 md:p-10" :class="show ? 'pb-0' : ''">
+                <div class="p-8 md:p-10 md:w-[460px]" :class="show ? 'pb-0' : ''">
                     <div>
-                        <h5 class="text-[16px] md:text-xl font-semibold text-article-dark-grayish-blue">
-                            Shift the overall look and feel
-                            <br class="hidden sm:block md:hidden"> by
-                            <br class="hidden md:block"> adding these wonderful touches
-                            <br class="hidden sm:block"> to furniture in your home
-
+                        <h5 class="text-[18.25px] md:text-xl text-justify font-semibold text-article-dark-grayish-blue">
+                            Shift the overall look and feel by adding these wonderful touches
+                            to furniture in your home
                         </h5>
-                        <h6 class="mt-5 text-sm md:text-left text-article-dark-blue">
-                            Ever been in a room and felt like
-                            <br class="hidden xs:block md:hidden"> something was missing?
-                            <br class="hidden md:block"> Perhaps it felt
-                            <br class="hidden xs:block md:hidden"> slightly bare and inviting. I've got some
-                            <br class="hidden xs:block"> simple tips to help you make any room
-                            <br class="hidden xs:block md:hidden"> feel complete.
-                        </h6>
 
+                        <h6 class="mt-5 text-[16px] text-justify text-article-dark-blue">
+                            Ever been in a room and felt like something was missing?
+                            Perhaps it felt slightly bare and inviting.
+                            I've got some simple tips to help you make any room feel complete.
+                        </h6>
                     </div>
 
                     <div :class="show ? 'hidden' : 'block'" class="flex justify-between items-center mt-8">
