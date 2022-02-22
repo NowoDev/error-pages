@@ -2,17 +2,17 @@
     <section class="min-h-screen text-gray-400 bg-gray-900">
         <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-col mb-20 w-full text-center">
-                <h1 class="mb-1 text-2xl font-medium tracking-widest text-indigo-400">PAGES</h1>
+                <h1 class="mb-1 text-2xl font-medium tracking-widest text-cyan-400">PAGES</h1>
                 <p class="mx-auto text-base leading-relaxed lg:w-2/3">Tons of frontend pages built from scratch using
-                    Tailwind Css and Vue JS.
-                    All inspirations gotten from the internet</p>
+                    Tailwind CSS and Vue.js.
+                    All inspirations gotten from the internet.</p>
             </div>
             <div class="flex flex-wrap">
                 <div class="px-8 py-6 border-l-2 border-gray-800 xl:w-1/3 lg:w-1/2 md:w-full">
                     <h2 class="mb-2 text-lg font-medium text-white sm:text-xl">Landing Pages</h2>
-                    <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                        Distillery hexagon disrupt edison bulbche.</p>
-                    <router-link to="/landing" class="inline-flex items-center text-indigo-400">View
+                    <p class="mb-4 text-base leading-relaxed">Single & Multiple pages built with attention
+                        to detail, and with mobile-first approach.</p>
+                    <router-link to="/landing" class="inline-flex items-center text-cyan-400">View
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                              stroke-width="2" class="ml-2 w-4 h-4" viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -21,9 +21,9 @@
                 </div>
                 <div class="px-8 py-6 border-l-2 border-gray-800 xl:w-1/3 lg:w-1/2 md:w-full">
                     <h2 class="mb-2 text-lg font-medium text-white sm:text-xl">Error Pages</h2>
-                    <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                        Distillery hexagon disrupt edison bulbche.</p>
-                    <router-link to="/errors" class="inline-flex items-center text-indigo-400">View
+                    <p class="mb-4 text-base leading-relaxed">Custom Error pages that can be integrated into an tailwind
+                        project.</p>
+                    <router-link to="/errors" class="inline-flex items-center text-cyan-400">View
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                              stroke-width="2" class="ml-2 w-4 h-4" viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -32,9 +32,10 @@
                 </div>
                 <div class="px-8 py-6 border-l-2 border-gray-800 xl:w-1/3 lg:w-1/2 md:w-full">
                     <h2 class="mb-2 text-lg font-medium text-white sm:text-xl">Challenges</h2>
-                    <p class="mb-4 text-base leading-relaxed">Fingerstache flexitarian street art 8-bit waistcoat.
-                        Distillery hexagon disrupt edison bulbche.</p>
-                    <router-link to="/challenges" class="inline-flex items-center text-indigo-400">View
+                    <p class="mb-4 text-base leading-relaxed">Completed frontend design challenges mostly from the
+                        <a class="underline decoration-cyan-500 decoration-2 decoration-dashed"
+                           href="https://www.frontendmentor.io/" target="_blank">Frontend Mentor</a> site.</p>
+                    <router-link to="/challenges" class="inline-flex items-center text-cyan-400">View
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                              stroke-width="2" class="ml-2 w-4 h-4" viewBox="0 0 24 24">
                             <path d="M5 12h14M12 5l7 7-7 7"></path>
@@ -43,7 +44,7 @@
                 </div>
             </div>
 
-            <button class="flex p-4 mx-auto mt-16 text-white bg-white rounded-full border-0 focus:outline-none hover:bg-indigo-600">
+            <button class="flex p-4 mx-auto mt-16 text-white bg-white rounded-full border-0 focus:outline-none hover:bg-cyan-400">
                 <a href="https://github.com/nowodev/pages" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" class="w-16">
                         <!--! Font Awesome Pro 6.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
