@@ -43,7 +43,7 @@
             </div>
 
             <div class="right-0 mb-12 max-w-md md:mb-0 md:max-w-xl xl:max-w-2xl md:p-12 md:mr-12">
-                <img src="../../assets/images/flame-error.png" alt="">
+                <img src="../../../assets/images/flame-error.png" alt="">
             </div>
         </section>
     </div>
@@ -51,7 +51,7 @@
 
 <script>
     export default {
-        name: "FirstPage",
+        name: "First404",
         methods: {
             toggle() {
                 document.getElementById('nav').classList.toggle('hidden')

@@ -1,7 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from "../Pages/Home.vue"
-import Error404 from "../Pages/404.vue"
-import FirstPage from "../Pages/404/FirstPage.vue"
+import ErrorsIndex from "../Pages/Error_Pages/Index.vue"
+import Error404Index from "../Pages/Error_Pages/404/Index.vue"
+import First404 from "../Pages/Error_Pages/404/First.vue"
 import NotFound from "../Pages/NotFound.vue"
 import Index from "../Pages/Challenges/Index.vue";
 import QRCode from "../Pages/Challenges/QRCode/Index.vue";
@@ -29,8 +30,9 @@ const routes = [
             title: 'Frontend Mentor | Article preview component',
         }
     },
-    { path: '/404', name: '404', component: Error404 },
-    { path: '/404/first', name: 'First', component: FirstPage },
+    { path: '/errors', name: 'Errors', component: ErrorsIndex },
+    { path: '/errors/404', name: 'Error404', component: Error404Index },
+    { path: '/errors/404/first', name: 'First404', component: First404 },
     { path: '/:pathMatch(.*)', name: 'NotFound', component: NotFound }
 ]
 
