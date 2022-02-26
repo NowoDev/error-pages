@@ -3,6 +3,7 @@
         <NavLink to="/challenges/qrcode">QRCode</NavLink>
         <NavLink to="/challenges/stats">Stats</NavLink>
         <NavLink to="/challenges/article-preview">Article</NavLink>
+        <NavLink to="/challenges/testimonials">Testimonials</NavLink>
     </div>
 </template>
 

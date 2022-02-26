@@ -1,13 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from "../Pages/Home.vue"
-import ErrorsIndex from "../Pages/Error_Pages/Index.vue"
-import Error404Index from "../Pages/Error_Pages/404/Index.vue"
-import First404 from "../Pages/Error_Pages/404/First.vue"
-import NotFound from "../Pages/NotFound.vue"
+import Article from "../Pages/Challenges/Article_Preview_Card/Index.vue"
 import Index from "../Pages/Challenges/Index.vue";
 import QRCode from "../Pages/Challenges/QRCode/Index.vue";
 import Stats from "../Pages/Challenges/Stats_Preview_Card/Index.vue"
-import Article from "../Pages/Challenges/Article_Preview_Card/Index.vue"
+import Testimonials from "../Pages/Challenges/Testimonials/Index.vue"
+import First404 from "../Pages/Error_Pages/404/First.vue"
+import Error404Index from "../Pages/Error_Pages/404/Index.vue"
+import ErrorsIndex from "../Pages/Error_Pages/Index.vue"
+import Home from "../Pages/Home.vue"
+import NotFound from "../Pages/NotFound.vue"
 
 const routes = [
     { path: '/', name: 'Home', component: Home },
@@ -28,6 +29,12 @@ const routes = [
         path: '/challenges/article-preview', name: 'Article', component: Article,
         meta: {
             title: 'Frontend Mentor | Article preview component',
+        }
+    },
+    {
+        path: '/challenges/testimonials', name: 'Testimonials', component: Testimonials,
+        meta: {
+            title: 'Frontend Mentor | Testimonials grid section',
         }
     },
     { path: '/errors', name: 'Errors', component: ErrorsIndex },
