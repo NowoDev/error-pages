@@ -1,29 +1,29 @@
 <template>
-    <div class="flex flex-col w-full min-h-screen bg-qr-primary">
-        <div class="grid grid-cols-1 gap-y-8 p-4">
+    <div class="flex flex-col w-full min-h-screen bg-qr-primary lg:p8 xl:p-16">
+        <div class="grid grid-cols-1 gap-y-8 p-4 m-auto md:w-1/2 lg:w-full lg:grid-cols-4 lg:gap-x-8">
 
-            <div class="p-10 rounded-xl bg-tes-moderate-violet relative">
-                <div class="absolute z-0 right-0 top-0 mr-7 mt-4">
-                    <img src="../../../assets/images/testimonials/bg-pattern-quotation.svg" class="w-28" alt="">
+            <div class="relative p-10 rounded-xl bg-tes-moderate-violet lg:col-span-2 lg:order-1">
+                <div class="absolute top-0 right-0 z-0 mt-4 mr-7 lg:mr-20">
+                    <img alt="" class="w-28" src="../../../assets/images/testimonials/bg-pattern-quotation.svg">
                 </div>
-                <div class="flex gap-x-6 relative items-center">
+                <div class="flex relative gap-x-6 items-center">
                     <img alt="Daniel"
                          class="rounded-full border-4 border-gray-400"
                          src="../../../assets/images/testimonials/image-daniel.jpg">
 
                     <div>
-                        <h5 class="font-semibold text-tes-light-grayish-blue">Daniel Clifford</h5>
-                        <h6 class="text-tes-light-grayish-blue opacity-50">Verified Graduate</h6>
+                        <h5 class="font-semibold text-tes-light-grayish-blue lg:text-sm">Daniel Clifford</h5>
+                        <h6 class="opacity-50 text-tes-light-grayish-blue lg:text-sm">Verified Graduate</h6>
                     </div>
                 </div>
 
-                <div class="mt-8 relative space-y-5">
-                    <h1 class="text-2xl leading-snug text-tes-light-grayish-blue font-semibold">
+                <div class="relative mt-8 space-y-5">
+                    <h1 class="text-2xl font-semibold leading-snug lg:text-xl text-tes-light-grayish-blue">
                         I received a job offer mid-course, and the subjects I learned were current, if not more so,
                         in the company I joined. I honestly feel I got every penny’s worth.
                     </h1>
 
-                    <p class="text-tes-light-grayish-blue opacity-70">
+                    <p class="opacity-70 text-tes-light-grayish-blue">
                         “ I was an EMT for many years before I joined the bootcamp. I’ve been looking to make a
                         transition and have heard some people who had an amazing experience here. I signed up
                         for the free intro course and found it incredibly fun! I enrolled shortly thereafter.
@@ -34,73 +34,73 @@
                 </div>
             </div>
 
-            <div class="p-10 rounded-xl bg-tes-very-dark-grayish-blue">
+            <div class="p-10 rounded-xl bg-tes-very-dark-grayish-blue lg:order-2">
                 <div class="flex gap-x-6 items-center">
                     <img alt="Jonathan"
                          class="rounded-full border-4 border-gray-400"
                          src="../../../assets/images/testimonials/image-jonathan.jpg">
 
                     <div>
-                        <h5 class="font-semibold text-tes-light-grayish-blue">Jonathan Walters</h5>
-                        <h6 class="text-tes-light-grayish-blue opacity-50">Verified Graduate</h6>
+                        <h5 class="font-semibold text-tes-light-grayish-blue lg:text-sm">Jonathan Walters</h5>
+                        <h6 class="opacity-50 text-tes-light-grayish-blue lg:text-sm">Verified Graduate</h6>
                     </div>
                 </div>
 
                 <div class="mt-8 space-y-5">
-                    <h1 class="text-2xl leading-snug text-tes-light-grayish-blue font-semibold">
+                    <h1 class="text-2xl font-semibold leading-snug lg:text-xl text-tes-light-grayish-blue">
                         The team was very supportive and kept me motivated.
                     </h1>
 
-                    <p class="text-tes-light-grayish-blue opacity-70">
+                    <p class="opacity-70 text-tes-light-grayish-blue">
                         “ I started as a total newbie with virtually no coding skills. I now work as a mobile engineer
                         for a big company. This was one of the best investments I’ve made in myself. ”
                     </p>
                 </div>
             </div>
 
-            <div class="p-10 bg-white rounded-xl">
+            <div class="p-10 bg-white rounded-xl lg:order-4">
                 <div class="flex gap-x-6 items-center">
                     <img alt="Jeanette"
                          class="rounded-full border-4 border-gray-400"
                          src="../../../assets/images/testimonials/image-jeanette.jpg">
 
                     <div>
-                        <h5 class="font-semibold text-tes-very-dark-grayish-blue">Jeanette Harmon</h5>
-                        <h6 class="opacity-50 text-tes-very-dark-grayish-blue">Verified Graduate</h6>
+                        <h5 class="font-semibold text-tes-very-dark-grayish-blue lg:text-sm">Jeanette Harmon</h5>
+                        <h6 class="opacity-50 text-tes-very-dark-grayish-blue lg:text-sm">Verified Graduate</h6>
                     </div>
                 </div>
 
                 <div class="mt-8 space-y-5">
-                    <h1 class="text-2xl text-tes-very-dark-grayish-blue leading-snug font-semibold">
+                    <h1 class="text-2xl font-semibold leading-snug lg:text-xl text-tes-very-dark-grayish-blue">
                         An overall wonderful and rewarding experience.
                     </h1>
 
-                    <p class="opacity-70 text-tes-very-dark-grayish-blue opacity-70">
+                    <p class="opacity-70 text-tes-very-dark-grayish-blue">
                         “ Thank you for the wonderful experience! I now have a job I really enjoy, and make a good
                         living while doing something I love. ”
                     </p>
                 </div>
             </div>
 
-            <div class="p-10 rounded-xl bg-tes-very-dark-blackish-blue">
+            <div class="p-10 rounded-xl bg-tes-very-dark-blackish-blue lg:order-5 lg:col-span-2">
                 <div class="flex gap-x-6 items-center">
                     <img alt="Patrick"
                          class="rounded-full border-4 border-gray-400"
                          src="../../../assets/images/testimonials/image-patrick.jpg">
 
                     <div>
-                        <h5 class="font-semibold text-tes-light-grayish-blue">Patrick Abrams</h5>
-                        <h6 class="text-tes-light-grayish-blue opacity-50">Verified Graduate</h6>
+                        <h5 class="font-semibold text-tes-light-grayish-blue lg:text-sm">Patrick Abrams</h5>
+                        <h6 class="opacity-50 text-tes-light-grayish-blue lg:text-sm">Verified Graduate</h6>
                     </div>
                 </div>
 
                 <div class="mt-8 space-y-5">
-                    <h1 class="text-2xl leading-snug text-tes-light-grayish-blue font-semibold">
+                    <h1 class="text-2xl font-semibold leading-snug lg:text-xl text-tes-light-grayish-blue">
                         Awesome teaching support from TAs who did the bootcamp themselves. Getting guidance from them
                         and learning from their experiences was easy.
                     </h1>
 
-                    <p class="text-tes-light-grayish-blue opacity-70 opacity-70">
+                    <p class="opacity-70 text-tes-light-grayish-blue">
                         “ The staff seem genuinely concerned about my progress which I find really refreshing. The
                         program gave me the confidence necessary to be able to go out in the world and present myself as
                         a capable junior developer. The standard is above the rest. You will get the personal attention
@@ -109,24 +109,24 @@
                 </div>
             </div>
 
-            <div class="p-10 bg-white rounded-xl">
+            <div class="p-10 bg-white rounded-xl lg:order-3 lg:row-span-2">
                 <div class="flex gap-x-6 items-center">
                     <img alt="Kira"
                          class="rounded-full border-4 border-gray-400"
                          src="../../../assets/images/testimonials/image-kira.jpg">
 
                     <div>
-                        <h5 class="font-semibold text-tes-very-dark-grayish-blue">Kira Whittle</h5>
-                        <h6 class="opacity-50 text-tes-very-dark-grayish-blue">Verified Graduate</h6>
+                        <h5 class="font-semibold text-tes-very-dark-grayish-blue lg:text-sm">Kira Whittle</h5>
+                        <h6 class="opacity-50 text-tes-very-dark-grayish-blue lg:text-sm">Verified Graduate</h6>
                     </div>
                 </div>
 
                 <div class="mt-8 space-y-5">
-                    <h1 class="text-[25px] text-tes-very-dark-grayish-blue leading-snug font-semibold">
+                    <h1 class="text-2xl font-semibold leading-snug lg:text-xl text-tes-very-dark-grayish-blue">
                         Such a life-changing experience. Highly recommended!
                     </h1>
 
-                    <p class="opacity-70 text-tes-very-dark-grayish-blue opacity-70">
+                    <p class="opacity-70 text-tes-very-dark-grayish-blue">
                         “ Before joining the bootcamp, I’ve never written a line of code. I needed some structure from
                         professionals who can help me learn programming step by step. I was encouraged to enroll by a
                         former student of theirs who can only say wonderful things about the program. The entire
