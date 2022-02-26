@@ -1,31 +1,26 @@
 <template>
     <div class="flex flex-col p-4 w-full min-h-screen bg-stats-dark-blue">
-        <div class="flex justify-center m-auto">
-            <div class="w-full rounded-xl md:flex md:flex-row-reverse bg-stats-desaturated-blue">
-                <div class="relative">
+        <div class="container flex justify-center m-auto">
+            <div class="w-80 rounded-xl sm:w-96 md:w-full lg:w-9/12 md:flex md:flex-row-reverse bg-stats-desaturated-blue">
+                <div class="relative lg:w-1/2">
                     <div class="absolute w-full h-full rounded-t-xl opacity-50 bg-stats-soft-violet md:rounded-tl-none md:rounded-r-xl" />
-                    <img src="../../../assets/images/image-header-mobile.jpg"
+                    <img alt="stats card"
                          class="object-cover rounded-t-xl md:hidden"
-                         alt="stats card">
-                    <img src="../../../assets/images/image-header-desktop.jpg"
-                         class="hidden object-cover h-full rounded-t-xl md:block md:rounded-tl-none md:rounded-r-xl"
-                         alt="stats card">
+                         src="../../../assets/images/image-header-mobile.jpg">
+                    <img alt="stats card"
+                         class="hidden object-cover w-full h-full rounded-t-xl md:block md:rounded-tl-none md:rounded-r-xl"
+                         src="../../../assets/images/image-header-desktop.jpg">
                 </div>
 
-                <div class="py-8 my-auto md:pl-12 md:pr-16">
+                <div class="py-8 px-2 md:w-[860px] lg:w-1/2 my-auto md:pl-12 md:pr-16">
                     <div>
                         <h4 class="text-3xl font-bold text-center md:text-4xl md:text-left text-stats-white">
-                            Get <span class="text-stats-soft-violet">insights</span> that
-                            <br class="md:hidden">help
-                            <br class="hidden md:block">your business
-                            <br class="md:hidden">grow.
+                            Get <span class="text-stats-soft-violet">insights</span> that help
+                            your business grow.
                         </h4>
-                        <p class="mt-5 text-lg text-center md:text-left text-stats-trans-white">
-                            Discover the benefits of data
-                            <br class="md:hidden"> analytics and make
-                            <br class="hidden md:block"> better decisions
-                            <br class="md:hidden"> regarding revenue, customer
-                            <br> experience, and overall efficiency.
+                        <p class="mt-5 leading-relaxed text-center md:text-lg md:text-left text-stats-trans-white">
+                            Discover the benefits of data analytics and make better decisions
+                            regarding revenue, customer experience, and overall efficiency.
                         </p>
                     </div>
 
