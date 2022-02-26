@@ -28,6 +28,12 @@ module.exports = {
                 'article-dark-blue': 'hsl(214, 17%, 51%)',
                 'article-grayish-blue': 'hsl(212, 23%, 69%)',
                 'article-light-grayish-blue': 'hsl(210, 46%, 95%)',
+
+                // testimonials color
+                'tes-moderate-violet': 'hsl(263, 55%, 52%)',
+                'tes-very-dark-grayish-blue': 'hsl(217, 19%, 35%)',
+                'tes-very-dark-blackish-blue': 'hsl(219, 29%, 14%)',
+                'tes-light-grayish-blue': 'hsl(210, 46%, 95%)'
             }
         },
     },
