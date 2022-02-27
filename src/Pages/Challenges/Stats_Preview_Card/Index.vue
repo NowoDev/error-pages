@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col p-4 w-full min-h-screen bg-stats-dark-blue">
         <div class="container flex justify-center m-auto">
-            <div class="w-80 rounded-xl sm:w-96 md:w-full lg:w-9/12 md:flex md:flex-row-reverse bg-stats-desaturated-blue">
+            <div class="rounded-xl w-96 md:w-full lg:w-9/12 md:flex md:flex-row-reverse bg-stats-desaturated-blue">
                 <div class="relative lg:w-1/2">
                     <div class="absolute w-full h-full rounded-t-xl opacity-50 bg-stats-soft-violet md:rounded-tl-none md:rounded-r-xl" />
                     <img alt="stats card"
@@ -12,7 +12,7 @@
                          src="../../../assets/images/image-header-desktop.jpg">
                 </div>
 
-                <div class="py-8 px-2 md:w-[860px] lg:w-1/2 my-auto md:pl-12 md:pr-16">
+                <div class="py-8 px-4 md:w-[860px] lg:w-1/2 my-auto md:pl-12 md:pr-16">
                     <div>
                         <h4 class="text-3xl font-bold text-center md:text-4xl md:text-left text-stats-white">
                             Get <span class="text-stats-soft-violet">insights</span> that help
