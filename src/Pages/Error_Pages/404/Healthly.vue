@@ -2,7 +2,7 @@
     <header class="relative z-10 w-full bg-white">
         <nav class="container flex flex-col mx-auto w-full md:justify-between md:flex-row">
             <div class="flex justify-between items-center">
-                <h1 class="mx-2 font-bold uppercase text-3xl text-[#46B892]">Healthly</h1>
+                <h1 class="p-2 font-bold uppercase text-3xl text-[#46B892]">Healthly</h1>
 
                 <button class="mr-2 md:hidden" @click="toggleNav">
                     <svg class="fill-[#46B892] w-5" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg">
