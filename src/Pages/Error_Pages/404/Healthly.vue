@@ -28,8 +28,8 @@
     </header>
 
     <main class="flex absolute inset-0 items-center h-screen bg-white">
-        <section class="container flex flex-col-reverse md:flex-row m-auto w-full">
-            <div class="space-y-4 md:w-1/2 leading-8 p-4">
+        <section class="container flex flex-col-reverse m-auto w-full md:flex-row">
+            <div class="p-4 space-y-4 leading-8 md:w-1/2">
                 <h2 class="text-5xl font-bold text-[#45B793]">404</h2>
                 <h3 class="text-[#45B793] text-4xl font-bold">Sorry, <br>
                     Something's broken!
@@ -40,7 +40,7 @@
                     <br> Please be rest assured, we're fixing it.
                 </p>
 
-                <button class="uppercase text-white font-bold rounded-md bg-[#45B793] px-8 py-2">
+                <button class="uppercase text-white text-sm font-bold rounded-md bg-[#45B793] px-8 py-2">
                     Back to Home
                 </button>
             </div>
