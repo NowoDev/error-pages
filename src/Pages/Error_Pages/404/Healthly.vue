@@ -28,16 +28,16 @@
     </header>
 
     <main class="flex absolute inset-0 items-center h-screen bg-white">
-        <section class="container flex flex-row m-auto w-full">
-            <div class="space-y-4 w-1/2 leading-8">
+        <section class="container flex flex-col-reverse md:flex-row m-auto w-full">
+            <div class="space-y-4 md:w-1/2 leading-8 p-4">
                 <h2 class="text-5xl font-bold text-[#45B793]">404</h2>
                 <h3 class="text-[#45B793] text-4xl font-bold">Sorry, <br>
                     Something's broken!
                 </h3>
 
-                <p>It's not your fault, it could be connection issues, our servers or some weird glitch.
-                    <br>
-                    Please be rest assured, we're fixing it.
+                <p>It's not your fault, it could be connection issues, our servers
+                    <br> or some weird glitch.
+                    <br> Please be rest assured, we're fixing it.
                 </p>
 
                 <button class="uppercase text-white font-bold rounded-md bg-[#45B793] px-8 py-2">
@@ -45,7 +45,7 @@
                 </button>
             </div>
 
-            <div class="w-1/2">
+            <div class="md:w-1/2">
                 <img alt="Injured Man" class="" src="../../../assets/images/undraw_injured_9757.svg">
             </div>
         </section>
