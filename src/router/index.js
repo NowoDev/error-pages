@@ -5,10 +5,10 @@ import QRCode from "../Pages/Challenges/QRCode/Index.vue";
 import Stats from "../Pages/Challenges/Stats_Preview_Card/Index.vue"
 import Testimonials from "../Pages/Challenges/Testimonials/Index.vue"
 import First404 from "../Pages/Error_Pages/404/First.vue"
+import Healthly from "../Pages/Error_Pages/404/Healthly.vue";
 import Error404Index from "../Pages/Error_Pages/404/Index.vue"
 import ErrorsIndex from "../Pages/Error_Pages/Index.vue"
 import Home from "../Pages/Home.vue"
-import Healthly from "../Pages/Landing/Healthly.vue";
 import NotFound from "../Pages/NotFound.vue"
 
 const routes = [
@@ -41,7 +41,7 @@ const routes = [
     { path: '/errors', name: 'Errors', component: ErrorsIndex },
     { path: '/errors/404', name: 'Error404', component: Error404Index },
     { path: '/errors/404/first', name: 'First404', component: First404 },
-    { path: '/landing/healthly', name: 'First', component: Healthly },
+    { path: '/errors/404/healthly', name: 'Healthly', component: Healthly },
     { path: '/:pathMatch(.*)', name: 'NotFound', component: NotFound }
 ]
 

@@ -1,6 +1,7 @@
 <template>
     <div class="grid grid-cols-3 gap-4 items-center">
         <NavLink to="/errors/404/first">First</NavLink>
+        <NavLink to="/errors/404/healthly">Healthly</NavLink>
     </div>
 </template>
 
