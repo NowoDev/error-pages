@@ -1,5 +1,5 @@
 <template>
-    <nav class="fixed z-10 p-5 w-full bg-white border-b md:px-10 md:py-0">
+    <nav class="fixed z-10 p-5 w-full bg-white border-b md:px-10 md:py-0 antialiased">
         <div class="flex justify-between mx-auto max-w-7xl">
             <div class="flex items-center space-x-4 w-full md:space-x-0">
                 <button class="md:hidden" @click="toggleNav">
@@ -65,7 +65,7 @@
     </nav>
 
     <main :class="showNav === true ? 'blur' : 'blur-0'"
-          class="flex inset-0 h-screen bg-white">
+          class="flex inset-0 h-screen bg-white antialiased">
         <div class="flex m-auto max-w-7xl">
             <!-- cart item-->
             <div :class="showCart === true ? 'block' : 'hidden'"
@@ -172,6 +172,11 @@
             </div>
         </div>
     </main>
+
+    <div class="text-center attribution bg-white pb-3 px-4">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/nowodev" target="_blank">Favour Okunowo</a>.
+    </div>
 </template>
 
 <script>
@@ -197,3 +202,15 @@
         },
     }
 </script>
+
+<style>
+    @import url('https://fonts.google.com/specimen/Kumbh+Sans');
+
+    * {
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
+    }
+</style>
