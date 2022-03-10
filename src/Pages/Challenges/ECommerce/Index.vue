@@ -1,5 +1,5 @@
 <template>
-    <nav class="fixed z-10 p-5 w-full bg-white border-b md:px-10 md:py-0 antialiased">
+    <nav class="fixed z-10 p-5 w-full antialiased bg-white border-b md:px-10 md:py-0">
         <div class="flex justify-between mx-auto max-w-7xl">
             <div class="flex items-center space-x-4 w-full md:space-x-0">
                 <button class="md:hidden" @click="toggleNav">
@@ -37,7 +37,7 @@
                     </svg>
 
                     <span v-show="quantity > 0"
-                          class="absolute animate-bounce -mt-7 px-1 bg-e-orange text-white text-xs rounded-2xl">
+                          class="absolute px-1 -mt-7 text-xs text-white rounded-2xl animate-bounce bg-e-orange">
                         {{ quantity }}
                     </span>
                 </button>
@@ -70,16 +70,43 @@
     </nav>
 
     <main :class="showNav === true ? 'blur' : 'blur-0'"
-          class="flex inset-0 h-screen bg-white antialiased">
+          class="flex inset-0 h-screen antialiased bg-white">
         <div class="flex m-auto max-w-7xl">
             <!-- cart item-->
             <div :class="showCart === true ? 'block' : 'hidden'"
-                 class="absolute right-0 top-20 z-20 px-3 w-full max-w-md md:top-32">
-                <div class="bg-white rounded-xl shadow-2xl md:ml-auto">
-                    <h1 class="px-9 py-6 font-semibold border-b-[2.5px] text-e-very-dark-blue">Cart</h1>
+                 class="absolute right-0 top-20 z-20 px-3 w-full max-w-sm md:top-32">
+                <div class="bg-white rounded-xl shadow-2xl md:border">
+                    <h1 class="p-6 font-semibold border-b-[2.5px] text-e-very-dark-blue">Cart</h1>
 
-                    <div class="flex justify-center items-center h-56">
+                    <div :class="quantity === 0 ? 'block' : 'hidden'" class="flex justify-center items-center h-56">
                         <p class="font-semibold text-e-dark-grayish-blue">Your cart is empty.</p>
+                    </div>
+
+                    <div :class="quantity !== 0 ? 'block' : 'hidden'" class="p-6">
+                        <div class="flex justify-between items-center">
+                            <img alt="Thumbnail 1" class="w-16 rounded-lg"
+                                 src="../../../assets/images/ecommerce/image-product-1-thumbnail.jpg">
+
+                            <div class="text-e-dark-grayish-blue">
+                                <h2>Autumn Limited Edition...</h2>
+                                <h3>$125.00 x {{ quantity }} <strong class="text-e-very-dark-blue">${{
+                                        125 * quantity
+                                    }}.00</strong></h3>
+                            </div>
+
+                            <button @click="quantity = 0">
+                                <svg class="w-6 h-6 text-e-grayish-blue" fill="none" stroke="currentColor"
+                                     stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
+                                          stroke-linecap="round"
+                                          stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <button class="px-6 py-2 mt-5 w-full font-bold text-white rounded-lg bg-e-orange">
+                            Checkout
+                        </button>
                     </div>
                 </div>
             </div>
@@ -152,18 +179,19 @@
 
                     <div class="flex flex-col mt-4 md:flex-row">
                         <div class="flex justify-between items-center p-4 mt-3 rounded-md md:w-2/5 bg-e-light-grayish-blue">
-                            <button class="p-2 hover:opacity-75" @click="quantity--">
+                            <button class="p-2 hover:opacity-75" @click="dummyQuantity--">
                                 <img alt="Minus" src="../../../assets/images/ecommerce/icon-minus.svg">
                             </button>
 
-                            <p class="text-lg font-bold text-e-very-dark-blue">{{ quantity }}</p>
+                            <p class="text-lg font-bold text-e-very-dark-blue">{{ dummyQuantity }}</p>
 
-                            <button class="p-2 hover:opacity-75" @click="quantity++">
+                            <button class="p-2 hover:opacity-75" @click="dummyQuantity++">
                                 <img alt="Plus" src="../../../assets/images/ecommerce/icon-plus.svg">
                             </button>
                         </div>
 
-                        <button class="flex gap-x-4 justify-center items-center py-4 mt-4 w-full font-bold text-white rounded-md md:w-3/5 bg-e-orange hover:opacity-75 hover:shadow-2xl hover:shadow-orange-300">
+                        <button class="flex gap-x-4 justify-center items-center py-4 mt-4 w-full font-bold text-white rounded-md md:w-3/5 bg-e-orange hover:opacity-75 hover:shadow-2xl hover:shadow-orange-300"
+                                @click="addToCart">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
                                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
@@ -178,7 +206,7 @@
         </div>
     </main>
 
-    <div class="text-center attribution bg-white pb-3 px-4">
+    <div class="px-4 pb-3 text-center bg-white attribution">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
         Coded by <a href="https://github.com/nowodev" target="_blank">Favour Okunowo</a>.
     </div>
@@ -192,6 +220,7 @@
             return {
                 showNav: false,
                 showCart: false,
+                dummyQuantity: 0,
                 quantity: 0,
             }
         },
@@ -203,6 +232,10 @@
 
             toggleCart: function () {
                 this.showCart = !this.showCart
+            },
+
+            addToCart: function () {
+                this.quantity = this.dummyQuantity
             }
         },
     }
