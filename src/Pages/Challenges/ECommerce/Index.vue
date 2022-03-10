@@ -11,14 +11,17 @@
                 </div>
 
                 <div class="flex items-center space-x-6">
-                    <img alt="Cart" class="w-8 h-7" src="../../../assets/images/ecommerce/icon-cart.svg">
+                    <button @click="toggleCart">
+                        <img alt="Cart" class="w-8 h-7" src="../../../assets/images/ecommerce/icon-cart.svg">
+                    </button>
+
                     <img alt="Avatar" class="w-8" src="../../../assets/images/ecommerce/image-avatar.png">
                 </div>
             </div>
 
             <!-- mobile nav-->
             <div :class="showNav === true ? 'block' : 'hidden'"
-                 class="absolute inset-0 p-6 w-2/3 h-screen bg-white z-50">
+                 class="absolute inset-0 z-50 p-6 w-2/3 h-screen bg-white">
                 <button @click="toggleNav">
                     <img alt="Close" class="p-3" src="../../../assets/images/ecommerce/icon-close.svg">
                 </button>
@@ -33,6 +36,17 @@
         </nav>
 
         <main :class="showNav === true ? 'blur' : 'blur-0'">
+            <!-- cart item-->
+            <div :class="showCart === true ? 'block' : 'hidden'" class="absolute z-30 px-3 w-full">
+                <div class="mt-4 w-full bg-white rounded-xl">
+                    <h1 class="px-9 py-6 font-semibold border-b text-e-very-dark-blue">Cart</h1>
+
+                    <div class="flex justify-center items-center h-56 bg-white rounded-xl">
+                        <p class="font-semibold text-e-dark-grayish-blue">Your cart is empty.</p>
+                    </div>
+                </div>
+            </div>
+
             <div class="relative">
                 <img alt="Product 1" src="../../../assets/images/ecommerce/image-product-1.jpg">
 
@@ -52,9 +66,9 @@
             <div class="p-6 bg-white">
                 <h3 class="text-sm font-semibold uppercase text-e-orange">Sneaker Company</h3>
 
-                <h4 class="text-2xl font-semibold text-e-very-dark-blue mt-3">Fall Limited Edition Sneakers</h4>
+                <h4 class="mt-3 text-2xl font-semibold text-e-very-dark-blue">Fall Limited Edition Sneakers</h4>
 
-                <p class="text-e-dark-grayish-blue mt-3">
+                <p class="mt-3 text-e-dark-grayish-blue">
                     These low-profile sneakers are your perfect casual wear companion. Featuring a
                     durable rubber outer sole, they’ll withstand everything the weather can offer.
                 </p>
@@ -65,17 +79,17 @@
                     <span class="ml-auto font-semibold line-through text-e-grayish-blue">$250.00</span>
                 </div>
 
-                <div class="flex justify-between mt-3 items-center p-4 rounded-md bg-e-light-grayish-blue">
-                    <button @click="quantity--" class="p-2">
+                <div class="flex justify-between items-center p-4 mt-3 rounded-md bg-e-light-grayish-blue">
+                    <button class="p-2" @click="quantity--">
                         <img alt="Minus" src="../../../assets/images/ecommerce/icon-minus.svg">
                     </button>
-                    <p class="font-bold text-e-very-dark-blue text-lg">{{ quantity }}</p>
-                    <button @click="quantity++" class="p-2">
+                    <p class="text-lg font-bold text-e-very-dark-blue">{{ quantity }}</p>
+                    <button class="p-2" @click="quantity++">
                         <img alt="Plus" src="../../../assets/images/ecommerce/icon-plus.svg">
                     </button>
                 </div>
 
-                <button class="flex items-center mt-4 py-4 w-full rounded-md bg-e-orange text-white font-bold justify-center gap-x-4">
+                <button class="flex gap-x-4 justify-center items-center py-4 mt-4 w-full font-bold text-white rounded-md bg-e-orange">
                     <img alt="Cart" class="w-5 h-5" src="../../../assets/images/ecommerce/icon-cart.svg">
                     Add to cart
                 </button>
@@ -91,6 +105,7 @@
         data() {
             return {
                 showNav: false,
+                showCart: false,
                 quantity: 0,
             }
         },
@@ -98,6 +113,10 @@
         methods: {
             toggleNav: function () {
                 this.showNav = !this.showNav
+            },
+
+            toggleCart: function () {
+                this.showCart = !this.showCart
             }
         },
     }
