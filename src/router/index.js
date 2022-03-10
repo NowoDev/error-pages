@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Article from "../Pages/Challenges/Article_Preview_Card/Index.vue"
+import ECommerce from "../Pages/Challenges/ECommerce/Index.vue"
 import Index from "../Pages/Challenges/Index.vue";
 import QRCode from "../Pages/Challenges/QRCode/Index.vue";
 import Stats from "../Pages/Challenges/Stats_Preview_Card/Index.vue"
@@ -36,6 +37,12 @@ const routes = [
         path: '/challenges/testimonials', name: 'Testimonials', component: Testimonials,
         meta: {
             title: 'Frontend Mentor | Testimonials grid section',
+        }
+    },
+    {
+        path: '/challenges/ecommerce', name: 'ECommerce', component: ECommerce,
+        meta: {
+            title: 'Frontend Mentor | E-commerce product page',
         }
     },
     { path: '/errors', name: 'Errors', component: ErrorsIndex },

@@ -4,6 +4,7 @@
         <NavLink to="/challenges/stats">Stats</NavLink>
         <NavLink to="/challenges/article-preview">Article</NavLink>
         <NavLink to="/challenges/testimonials">Testimonials</NavLink>
+        <NavLink to="/challenges/ecommerce">E-Commerce</NavLink>
     </div>
 </template>
 
