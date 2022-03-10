@@ -35,6 +35,11 @@
                               stroke-linecap="round"
                               stroke-linejoin="round" />
                     </svg>
+
+                    <span v-show="quantity > 0"
+                          class="absolute animate-bounce -mt-7 px-1 bg-e-orange text-white text-xs rounded-2xl">
+                        {{ quantity }}
+                    </span>
                 </button>
 
                 <img alt="Avatar"
