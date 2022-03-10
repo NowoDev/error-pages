@@ -33,7 +33,15 @@ module.exports = {
                 'tes-moderate-violet': 'hsl(263, 55%, 52%)',
                 'tes-very-dark-grayish-blue': 'hsl(217, 19%, 35%)',
                 'tes-very-dark-blackish-blue': 'hsl(219, 29%, 14%)',
-                'tes-light-grayish-blue': 'hsl(210, 46%, 95%)'
+                'tes-light-grayish-blue': 'hsl(210, 46%, 95%)',
+
+                // e-commerce color
+                'e-orange': 'hsl(26, 100%, 55%)',
+                'e-pale-orange': 'hsl(25, 100%, 94%)',
+                'e-very-dark-blue': 'hsl(220, 13%, 13%)',
+                'e-dark-grayish-blue': 'hsl(219, 9%, 45%)',
+                'e-grayish-blue': 'hsl(220, 14%, 75%)',
+                'e-light-grayish-blue': 'hsl(223, 64%, 98%)',
             }
         },
     },
