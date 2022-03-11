@@ -78,20 +78,23 @@
                 <div class="bg-white rounded-xl shadow-2xl md:border">
                     <h1 class="p-6 font-semibold border-b-[2.5px] text-e-very-dark-blue">Cart</h1>
 
-                    <div :class="quantity === 0 ? 'block' : 'hidden'" class="flex justify-center items-center h-56">
+                    <div :class="quantity <= 0 ? 'block' : 'hidden'" class="flex justify-center items-center h-56">
                         <p class="font-semibold text-e-dark-grayish-blue">Your cart is empty.</p>
                     </div>
 
-                    <div :class="quantity !== 0 ? 'block' : 'hidden'" class="p-6">
+                    <div :class="quantity > 0 ? 'block' : 'hidden'" class="p-6">
                         <div class="flex justify-between items-center">
                             <img alt="Thumbnail 1" class="w-16 rounded-lg"
                                  src="../../../assets/images/ecommerce/image-product-1-thumbnail.jpg">
 
                             <div class="text-e-dark-grayish-blue">
                                 <h2>Autumn Limited Edition...</h2>
-                                <h3>$125.00 x {{ quantity }} <strong class="text-e-very-dark-blue">${{
-                                        125 * quantity
-                                    }}.00</strong></h3>
+                                <h3>
+                                    $125.00 x {{ quantity }}
+                                    <strong class="text-e-very-dark-blue">
+                                        ${{ 125 * quantity }}.00
+                                    </strong>
+                                </h3>
                             </div>
 
                             <button @click="quantity = 0">
