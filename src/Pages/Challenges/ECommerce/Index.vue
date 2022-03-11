@@ -29,7 +29,7 @@
 
             <div class="flex items-center mr-5 space-x-6">
                 <button @click="toggleCart">
-                    <svg class="w-6 h-6 text-e-dark-grayish-blue hover:text-black" fill="none" stroke="currentColor"
+                    <svg class="w-6 h-6 text-e-dark-grayish-blue hover:stroke-black" fill="none" stroke="currentColor"
                          stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                               stroke-linecap="round"
@@ -113,11 +113,23 @@
 
             <div class="grid grid-cols-1 items-center md:grid-cols-2">
                 <div class="relative md:p-9">
-                    <img alt="Product 1" class="md:rounded-2xl"
-                         src="../../../assets/images/ecommerce/image-product-1.jpg">
+                    <div class="flex overflow-x-hidden space-x-6 w-full bg-white rounded snap-xx">
+                        <img id="slide-1" alt="Product 1"
+                             class="md:rounded-2xl snap-start"
+                             src="../../../assets/images/ecommerce/image-product-1.jpg">
+                        <img id="slide-2" alt="Product 2"
+                             class="md:rounded-2xl snap-start"
+                             src="../../../assets/images/ecommerce/image-product-2.jpg">
+                        <img id="slide-3" alt="Product 3"
+                             class="md:rounded-2xl snap-start"
+                             src="../../../assets/images/ecommerce/image-product-3.jpg">
+                        <img id="slide-4" alt="Product 4"
+                             class="md:rounded-2xl snap-start"
+                             src="../../../assets/images/ecommerce/image-product-4.jpg">
+                    </div>
 
                     <div class="flex absolute inset-0 justify-between items-center mx-6">
-                        <button class="p-3 bg-white rounded-full md:hidden">
+                        <button class="p-3 bg-white rounded-full md:hidden" @click="prev">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path clip-rule="evenodd"
@@ -126,7 +138,7 @@
                             </svg>
                         </button>
 
-                        <button class="p-3 bg-white rounded-full md:hidden">
+                        <button class="p-3 bg-white rounded-full md:hidden" @click="next">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path clip-rule="evenodd"
@@ -138,25 +150,29 @@
 
                     <!-- thumbnail images -->
                     <div class="grid hidden relative grid-cols-4 gap-x-6 mt-6 md:inline-flex">
-                        <button class="rounded-2xl focus:ring-e-orange transition duration-300 ease-in-out delay-75 focus:opacity-60 hover:opacity-75 hover:-translate-y-1 hover:scale-110 focus:ring-[3px]">
+                        <a class="rounded-2xl focus:ring-e-orange transition duration-300 ease-in-out delay-75 focus:opacity-60 hover:opacity-75 hover:-translate-y-1 hover:scale-110 focus:ring-[3px]"
+                           href="#slide-1">
                             <img alt="Thumbnail 1" class="rounded-2xl"
                                  src="../../../assets/images/ecommerce/image-product-1-thumbnail.jpg">
-                        </button>
+                        </a>
 
-                        <button class="rounded-2xl focus:ring-e-orange transition duration-300 ease-in-out delay-75 focus:opacity-60 hover:opacity-75 hover:-translate-y-1 hover:scale-110 focus:ring-[3px]">
+                        <a class="rounded-2xl focus:ring-e-orange transition duration-300 ease-in-out delay-75 focus:opacity-60 hover:opacity-75 hover:-translate-y-1 hover:scale-110 focus:ring-[3px]"
+                           href="#slide-2">
                             <img alt="Thumbnail 2" class="rounded-2xl"
                                  src="../../../assets/images/ecommerce/image-product-2-thumbnail.jpg">
-                        </button>
+                        </a>
 
-                        <button class="rounded-2xl focus:ring-e-orange transition duration-300 ease-in-out delay-75 focus:opacity-60 hover:opacity-75 hover:-translate-y-1 hover:scale-110 focus:ring-[3px]">
+                        <a class="rounded-2xl focus:ring-e-orange transition duration-300 ease-in-out delay-75 focus:opacity-60 hover:opacity-75 hover:-translate-y-1 hover:scale-110 focus:ring-[3px]"
+                           href="#slide-3">
                             <img alt="Thumbnail 3" class="rounded-2xl"
                                  src="../../../assets/images/ecommerce/image-product-3-thumbnail.jpg">
-                        </button>
+                        </a>
 
-                        <button class="rounded-2xl focus:ring-e-orange transition duration-300 ease-in-out delay-75 focus:opacity-60 hover:opacity-75 hover:-translate-y-1 hover:scale-110 focus:ring-[3px]">
+                        <a class="rounded-2xl focus:ring-e-orange transition duration-300 ease-in-out delay-75 focus:opacity-60 hover:opacity-75 hover:-translate-y-1 hover:scale-110 focus:ring-[3px]"
+                           href="#slide-4">
                             <img alt="Thumbnail 4" class="rounded-2xl"
                                  src="../../../assets/images/ecommerce/image-product-4-thumbnail.jpg">
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -222,6 +238,8 @@
                 showCart: false,
                 dummyQuantity: 0,
                 quantity: 0,
+                activeSlide: 1,
+                slides: [1, 2, 3, 4],
             }
         },
 
@@ -236,7 +254,15 @@
 
             addToCart: function () {
                 this.quantity = this.dummyQuantity
-            }
+            },
+
+            prev: function () {
+                this.activeSlide -= 1
+            },
+
+            next: function () {
+                this.activeSlide += 1
+            },
         },
     }
 </script>
@@ -250,5 +276,11 @@
 
     .attribution a {
         color: hsl(228, 45%, 44%);
+    }
+
+    .snap-xx {
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
     }
 </style>
