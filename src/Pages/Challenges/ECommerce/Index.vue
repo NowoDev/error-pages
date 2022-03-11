@@ -253,7 +253,8 @@
             },
 
             addToCart: function () {
-                this.quantity = this.dummyQuantity
+                this.quantity += this.dummyQuantity
+                this.dummyQuantity = 0
             },
 
             prev: function () {
