@@ -1,80 +1,82 @@
 <template>
-    <nav class="fixed z-10 p-5 w-full antialiased bg-white border-b md:px-10 md:py-0">
-        <div class="flex justify-between mx-auto max-w-7xl">
-            <div class="flex items-center space-x-4 w-full md:space-x-0">
-                <button class="md:hidden" @click="toggleNav">
-                    <svg class="w-8 h-8 text-e-dark-grayish-blue" fill="currentColor"
-                         viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path clip-rule="evenodd"
-                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                              fill-rule="evenodd" />
-                    </svg>
-                </button>
+    <div class="bg-white">
+        <nav class="fixed z-10 p-5 w-full antialiased bg-white border-b md:px-10 md:py-0">
+            <div class="flex justify-between mx-auto max-w-7xl">
+                <div class="flex items-center space-x-4 w-full md:space-x-0">
+                    <button class="md:hidden" @click="toggleNav">
+                        <svg class="w-8 h-8 text-e-dark-grayish-blue" fill="currentColor"
+                             viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd"
+                                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                  fill-rule="evenodd" />
+                        </svg>
+                    </button>
 
-                <img alt="sneakers" src="../../../assets/images/ecommerce/logo.svg">
+                    <img alt="sneakers" src="../../../assets/images/ecommerce/logo.svg">
 
-                <div class="hidden items-center pl-9 space-x-10 md:flex">
-                    <h3 class="py-10 text-lg cursor-pointer hover:border-b-e-orange hover:border-b-4 text-e-very-dark-blue">
-                        Collections</h3>
-                    <h3 class="py-10 text-lg cursor-pointer hover:border-b-e-orange hover:border-b-4 text-e-very-dark-blue">
-                        Men</h3>
-                    <h3 class="py-10 text-lg cursor-pointer hover:border-b-e-orange hover:border-b-4 text-e-very-dark-blue">
-                        Women</h3>
-                    <h3 class="py-10 text-lg cursor-pointer hover:border-b-e-orange hover:border-b-4 text-e-very-dark-blue">
-                        About</h3>
-                    <h3 class="py-10 text-lg cursor-pointer hover:border-b-e-orange hover:border-b-4 text-e-very-dark-blue">
-                        Contact</h3>
+                    <div class="hidden items-center pl-9 space-x-10 md:flex">
+                        <h3 class="py-10 text-lg cursor-pointer hover:border-b-e-orange hover:border-b-4 text-e-very-dark-blue">
+                            Collections</h3>
+                        <h3 class="py-10 text-lg cursor-pointer hover:border-b-e-orange hover:border-b-4 text-e-very-dark-blue">
+                            Men</h3>
+                        <h3 class="py-10 text-lg cursor-pointer hover:border-b-e-orange hover:border-b-4 text-e-very-dark-blue">
+                            Women</h3>
+                        <h3 class="py-10 text-lg cursor-pointer hover:border-b-e-orange hover:border-b-4 text-e-very-dark-blue">
+                            About</h3>
+                        <h3 class="py-10 text-lg cursor-pointer hover:border-b-e-orange hover:border-b-4 text-e-very-dark-blue">
+                            Contact</h3>
+                    </div>
+                </div>
+
+                <div class="flex items-center mr-5 space-x-6">
+                    <button @click="toggleCart">
+                        <svg class="w-6 h-6 text-e-dark-grayish-blue hover:stroke-black" fill="none"
+                             stroke="currentColor"
+                             stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round" />
+                        </svg>
+
+                        <span v-show="quantity > 0"
+                              class="absolute px-1 -mt-7 text-xs text-white rounded-2xl animate-bounce bg-e-orange">
+                            {{ quantity }}
+                        </span>
+                    </button>
+
+                    <img alt="Avatar"
+                         class="w-8 rounded-full transition duration-300 ease-in-out cursor-pointer hover:ring-2 md:w-12 hover:scale-110 hover:ring-e-orange"
+                         src="../../../assets/images/ecommerce/image-avatar.png">
                 </div>
             </div>
 
-            <div class="flex items-center mr-5 space-x-6">
-                <button @click="toggleCart">
-                    <svg class="w-6 h-6 text-e-dark-grayish-blue hover:stroke-black" fill="none" stroke="currentColor"
-                         stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                              stroke-linecap="round"
-                              stroke-linejoin="round" />
+            <!-- mobile nav-->
+            <div :class="showNav === true ? 'block' : 'hidden'"
+                 class="absolute inset-0 z-50 p-6 w-2/3 h-screen bg-white">
+                <button @click="toggleNav">
+                    <svg class="w-6 h-6 text-e-dark-grayish-blue" fill="currentColor" viewBox="0 0 20 20"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                              d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                              fill-rule="evenodd" />
                     </svg>
-
-                    <span v-show="quantity > 0"
-                          class="absolute px-1 -mt-7 text-xs text-white rounded-2xl animate-bounce bg-e-orange">
-                        {{ quantity }}
-                    </span>
                 </button>
-
-                <img alt="Avatar"
-                     class="w-8 rounded-full transition duration-300 ease-in-out cursor-pointer hover:ring-2 md:w-12 hover:scale-110 hover:ring-e-orange"
-                     src="../../../assets/images/ecommerce/image-avatar.png">
+                <div class="py-12 space-y-4">
+                    <h3 class="text-lg font-bold text-e-very-dark-blue">Collections</h3>
+                    <h3 class="text-lg font-bold text-e-very-dark-blue">Men</h3>
+                    <h3 class="text-lg font-bold text-e-very-dark-blue">Women</h3>
+                    <h3 class="text-lg font-bold text-e-very-dark-blue">About</h3>
+                    <h3 class="text-lg font-bold text-e-very-dark-blue">Contact</h3>
+                </div>
             </div>
-        </div>
+        </nav>
 
-        <!-- mobile nav-->
-        <div :class="showNav === true ? 'block' : 'hidden'"
-             class="absolute inset-0 z-50 p-6 w-2/3 h-screen bg-white">
-            <button @click="toggleNav">
-                <svg class="w-6 h-6 text-e-dark-grayish-blue" fill="currentColor" viewBox="0 0 20 20"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path clip-rule="evenodd"
-                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                          fill-rule="evenodd" />
-                </svg>
-            </button>
-            <div class="py-12 space-y-4">
-                <h3 class="text-lg font-bold text-e-very-dark-blue">Collections</h3>
-                <h3 class="text-lg font-bold text-e-very-dark-blue">Men</h3>
-                <h3 class="text-lg font-bold text-e-very-dark-blue">Women</h3>
-                <h3 class="text-lg font-bold text-e-very-dark-blue">About</h3>
-                <h3 class="text-lg font-bold text-e-very-dark-blue">Contact</h3>
-            </div>
-        </div>
-    </nav>
+        <main :class="showNav === true ? 'blur' : 'blur-0'"
+              class="flex m-auto max-w-7xl h-screen antialiased bg-white">
 
-    <main :class="showNav === true ? 'blur' : 'blur-0'"
-          class="flex inset-0 h-screen antialiased bg-white">
-        <div class="flex m-auto max-w-7xl">
             <!-- cart item-->
             <div :class="showCart === true ? 'block' : 'hidden'"
-                 class="absolute right-0 top-20 z-20 px-3 w-full max-w-sm md:top-32">
+                 class="absolute right-0 top-20 z-20 px-3 w-full max-w-sm md:top-[7.5rem]">
                 <div class="bg-white rounded-xl shadow-2xl md:border">
                     <h1 class="p-6 font-semibold border-b-[2.5px] text-e-very-dark-blue">Cart</h1>
 
@@ -222,12 +224,12 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
 
-    <div class="px-4 pb-3 text-center bg-white attribution">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        Coded by <a href="https://github.com/nowodev" target="_blank">Favour Okunowo</a>.
+        <div class="px-4 pb-3 text-center attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="https://github.com/nowodev" target="_blank">Favour Okunowo</a>.
+        </div>
     </div>
 </template>
 
