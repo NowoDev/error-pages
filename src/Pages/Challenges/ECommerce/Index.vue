@@ -200,7 +200,8 @@
 
                     <div class="flex flex-col mt-4 md:flex-row">
                         <div class="flex justify-between items-center p-4 mt-3 rounded-md md:w-2/5 bg-e-light-grayish-blue">
-                            <button class="p-2 hover:opacity-75" @click="dummyQuantity--">
+                            <button :disabled="dummyQuantity === 0" class="p-2 hover:opacity-75"
+                                    @click="dummyQuantity--">
                                 <img alt="Minus" src="../../../assets/images/ecommerce/icon-minus.svg">
                             </button>
 
