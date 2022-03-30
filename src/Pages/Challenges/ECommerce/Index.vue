@@ -118,20 +118,16 @@
 
             <div class="grid grid-cols-1 items-center md:grid-cols-2">
                 <div class="relative md:p-9">
-                    <div class="flex overflow-x-hidden space-x-6 w-full bg-white rounded snap-xx">
-                        <img id="slide-1" alt="Product 1"
-                             class="md:rounded-2xl snap-start"
-                             src="../../../assets/images/ecommerce/image-product-1.jpg">
-                        <img id="slide-2" alt="Product 2"
-                             class="md:rounded-2xl snap-start"
-                             src="../../../assets/images/ecommerce/image-product-2.jpg">
-                        <img id="slide-3" alt="Product 3"
-                             class="md:rounded-2xl snap-start"
-                             src="../../../assets/images/ecommerce/image-product-3.jpg">
-                        <img id="slide-4" alt="Product 4"
-                             class="md:rounded-2xl snap-start"
-                             src="../../../assets/images/ecommerce/image-product-4.jpg">
-                    </div>
+                    <vueper-slides ref="imageSlideShow" :bullets="false" :fixed-height="true" :touchable="true"
+                                   autoplay>
+                        <vueper-slide
+                                v-for="(slide, i) in slides"
+                                :key="i"
+                                :content="slide.content"
+                                :image="slide.image"
+                                :title="slide.title"
+                                class="md:rounded-2xl" />
+                    </vueper-slides>
 
                     <div class="flex absolute inset-0 justify-between items-center mx-6">
                         <button class="p-3 bg-white rounded-full md:hidden" @click="prev">
@@ -155,29 +151,29 @@
 
                     <!-- thumbnail images -->
                     <div class="grid hidden relative grid-cols-4 gap-x-6 mt-6 md:inline-flex">
-                        <a class="rounded-2xl focus:ring-e-orange transition duration-300 ease-in-out delay-75 focus:opacity-60 hover:opacity-75 hover:-translate-y-1 hover:scale-110 focus:ring-[3px]"
-                           href="#slide-1">
+                        <button class="rounded-2xl focus:ring-e-orange transition duration-300 ease-in-out delay-75 focus:opacity-60 hover:opacity-75 hover:-translate-y-1 hover:scale-110 focus:ring-[3px]"
+                                @click="$refs.imageSlideShow.goToSlide(4 - 4)">
                             <img alt="Thumbnail 1" class="rounded-2xl"
                                  src="../../../assets/images/ecommerce/image-product-1-thumbnail.jpg">
-                        </a>
+                        </button>
 
-                        <a class="rounded-2xl focus:ring-e-orange transition duration-300 ease-in-out delay-75 focus:opacity-60 hover:opacity-75 hover:-translate-y-1 hover:scale-110 focus:ring-[3px]"
-                           href="#slide-2">
+                        <button class="rounded-2xl focus:ring-e-orange transition duration-300 ease-in-out delay-75 focus:opacity-60 hover:opacity-75 hover:-translate-y-1 hover:scale-110 focus:ring-[3px]"
+                                @click="$refs.imageSlideShow.goToSlide(4 - 3)">
                             <img alt="Thumbnail 2" class="rounded-2xl"
                                  src="../../../assets/images/ecommerce/image-product-2-thumbnail.jpg">
-                        </a>
+                        </button>
 
-                        <a class="rounded-2xl focus:ring-e-orange transition duration-300 ease-in-out delay-75 focus:opacity-60 hover:opacity-75 hover:-translate-y-1 hover:scale-110 focus:ring-[3px]"
-                           href="#slide-3">
+                        <button class="rounded-2xl focus:ring-e-orange transition duration-300 ease-in-out delay-75 focus:opacity-60 hover:opacity-75 hover:-translate-y-1 hover:scale-110 focus:ring-[3px]"
+                                @click="$refs.imageSlideShow.goToSlide(4 - 2)">
                             <img alt="Thumbnail 3" class="rounded-2xl"
                                  src="../../../assets/images/ecommerce/image-product-3-thumbnail.jpg">
-                        </a>
+                        </button>
 
-                        <a class="rounded-2xl focus:ring-e-orange transition duration-300 ease-in-out delay-75 focus:opacity-60 hover:opacity-75 hover:-translate-y-1 hover:scale-110 focus:ring-[3px]"
-                           href="#slide-4">
+                        <button class="rounded-2xl focus:ring-e-orange transition duration-300 ease-in-out delay-75 focus:opacity-60 hover:opacity-75 hover:-translate-y-1 hover:scale-110 focus:ring-[3px]"
+                                @click="$refs.imageSlideShow.goToSlide(4 - 1)">
                             <img alt="Thumbnail 4" class="rounded-2xl"
                                  src="../../../assets/images/ecommerce/image-product-4-thumbnail.jpg">
-                        </a>
+                        </button>
                     </div>
                 </div>
 
@@ -235,8 +231,17 @@
 </template>
 
 <script>
-    export default {
+    import { defineComponent } from "vue";
+    import { VueperSlide, VueperSlides } from 'vueperslides'
+    import 'vueperslides/dist/vueperslides.css'
+
+    export default defineComponent({
         name: "Index.vue",
+
+        components: {
+            VueperSlides,
+            VueperSlide
+        },
 
         data() {
             return {
@@ -245,7 +250,20 @@
                 dummyQuantity: 0,
                 quantity: 0,
                 activeSlide: 1,
-                slides: [1, 2, 3, 4],
+                slides: [
+                    {
+                        image: '../../../../src/assets/images/ecommerce/image-product-1.jpg'
+                    },
+                    {
+                        image: '../../../../src/assets/images/ecommerce/image-product-2.jpg'
+                    },
+                    {
+                        image: '../../../../src/assets/images/ecommerce/image-product-3.jpg'
+                    },
+                    {
+                        image: '../../../../src/assets/images/ecommerce/image-product-4.jpg'
+                    }
+                ],
             }
         },
 
@@ -262,16 +280,8 @@
                 this.quantity += this.dummyQuantity
                 this.dummyQuantity = 0
             },
-
-            prev: function () {
-                this.activeSlide -= 1
-            },
-
-            next: function () {
-                this.activeSlide += 1
-            },
         },
-    }
+    })
 </script>
 
 <style>
@@ -281,13 +291,25 @@
         font-family: 'Kumbh Sans', sans-serif;
     }
 
-    .attribution a {
-        color: hsl(228, 45%, 44%);
+    @media only screen and (max-width: 400px) {
+        .vueperslides--fixed-height {
+            height: 450px;
+        }
     }
 
-    .snap-xx {
-        scroll-snap-type: x mandatory;
-        scroll-behavior: smooth;
-        -webkit-overflow-scrolling: touch;
+    @media only screen and (min-width: 400px) {
+        .vueperslides--fixed-height {
+            height: 500px;
+        }
+    }
+
+    @media only screen and (min-width: 1440px) {
+        .vueperslides--fixed-height {
+            height: 600px;
+        }
+    }
+
+    .attribution a {
+        color: hsl(228, 45%, 44%);
     }
 </style>
